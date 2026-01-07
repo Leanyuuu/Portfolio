@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lorenz Luyahan | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            ink: {
+              50: '#f5f7fb',
+              100: '#e9edf6',
+              200: '#d3daed',
+              300: '#b1c0de',
+              400: '#8fa6cf',
+              500: '#6d8bbf',
+              600: '#4b71b0',
+              700: '#345a97',
+              800: '#294676',
+              900: '#20365b'
+            },
+            glass: 'rgba(255, 255, 255, 0.08)'
+          },
+          boxShadow: {
+            'ios-card': '0 10px 30px rgba(0,0,0,0.25)',
+            'ios-top': '0 -1px 0 rgba(255,255,255,0.2)'
+          },
+          backdropBlur: {
+            xs: '2px'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :root { color-scheme: dark; }
+    body {
+      background: radial-gradient(circle at 20% 20%, rgba(110, 132, 255, 0.25), transparent 30%),
+                  radial-gradient(circle at 80% 0%, rgba(26, 214, 253, 0.18), transparent 25%),
+                  radial-gradient(circle at 50% 75%, rgba(255, 255, 255, 0.08), transparent 35%),
+                  #0f172a;
+    }
+    .glass {
+      background: linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+      backdrop-filter: blur(16px) saturate(140%);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .neumorphic {
+      box-shadow: 12px 12px 24px rgba(0,0,0,0.35), -10px -10px 24px rgba(255,255,255,0.06);
+    }
+    body.light {
+      color-scheme: light;
+      background: radial-gradient(circle at 20% 20%, rgba(93, 124, 255, 0.12), transparent 30%),
+                  radial-gradient(circle at 80% 0%, rgba(0, 190, 255, 0.10), transparent 25%),
+                  radial-gradient(circle at 50% 75%, rgba(0, 0, 0, 0.03), transparent 35%),
+                  #f8fafc;
+      color: #0f172a;
+    }
+    body.light .glass {
+      background: linear-gradient(145deg, rgba(255,255,255,0.65), rgba(255,255,255,0.40));
+      border-color: rgba(15, 23, 42, 0.08);
+    }
+    body.light .text-white { color: #0f172a !important; }
+    body.light .text-slate-200 { color: #334155 !important; }
+    body.light .text-slate-300 { color: #475569 !important; }
+    body.light .border-white\/10 { border-color: rgba(15, 23, 42, 0.06) !important; }
+    body.light .border-white\/15 { border-color: rgba(15, 23, 42, 0.08) !important; }
+    body.light .border-white\/20 { border-color: rgba(15, 23, 42, 0.1) !important; }
+    body.light .border-white\/30 { border-color: rgba(15, 23, 42, 0.14) !important; }
+    body.light .bg-white\/10 { background-color: rgba(15, 23, 42, 0.06) !important; }
+    body.light .bg-white\/15 { background-color: rgba(15, 23, 42, 0.08) !important; }
+    body.light .bg-white\/20 { background-color: rgba(15, 23, 42, 0.1) !important; }
+  </style>
+</head>
+<body class="text-slate-100 min-h-screen antialiased">
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute -left-24 top-12 h-72 w-72 rounded-full bg-gradient-to-br from-blue-400/30 via-indigo-400/20 to-cyan-400/0 blur-3xl"></div>
+    <div class="absolute right-0 bottom-12 h-72 w-72 rounded-full bg-gradient-to-br from-cyan-300/20 via-sky-300/10 to-blue-300/0 blur-3xl"></div>
+  </div>
+
+  <div class="relative mx-auto max-w-6xl px-6 py-10 space-y-10">
+    <header class="flex items-center justify-between glass rounded-3xl px-6 py-4 shadow-ios-card border border-white/10">
+      <div class="flex items-center gap-3">
+        <div class="h-12 w-12 rounded-2xl bg-gradient-to-br from-white/70 via-white/30 to-white/5 flex items-center justify-center shadow-inner shadow-white/10 text-xl font-semibold text-slate-900 overflow-hidden">
+          <img src="profile%20picture.jpg" alt="Lorenz Luyahan portrait" class="h-full w-full object-cover">
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-[0.35em] text-slate-300">As IT Student</p>
+          <h1 class="text-xl font-semibold text-white">Lorenz Luyahan</h1>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="resume.pdf" download class="glass px-4 py-2 rounded-2xl text-sm font-medium text-white border border-white/10 hover:border-white/30 transition">Resume</a>
+        <a href="mailto:obaleslorenz@gmail.com" class="glass px-4 py-2 rounded-2xl text-sm font-medium text-white border border-white/10 hover:border-white/30 transition">Email</a>
+        <a href="#contact" class="bg-white text-slate-900 px-4 py-2 rounded-2xl text-sm font-semibold shadow-ios-card hover:-translate-y-0.5 transition">Let’s talk</a>
+      </div>
+    </header>
+
+    <section class="glass rounded-3xl p-8 md:p-10 shadow-ios-card border border-white/10">
+      <div class="grid md:grid-cols-[1.2fr_0.8fr] gap-8 items-center">
+        <div class="space-y-6">
+          <p class="text-sm uppercase tracking-[0.35em] text-slate-300">UI/UX Designer | System Analyst</p>
+          <h2 class="text-4xl md:text-5xl font-semibold leading-tight text-white">
+            About Me
+          </h2>
+          <p class="text-lg text-slate-200">
+            Specializes in Laravel and Django backends with clean, fast interfaces powered by Tailwind and TypeScript. He focuses on performance, accessibility, and crafted micro-interactions.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <span class="glass border border-white/10 px-4 py-2 rounded-2xl text-sm">Laravel</span>
+            <span class="glass border border-white/10 px-4 py-2 rounded-2xl text-sm">Django</span>
+            <span class="glass border border-white/10 px-4 py-2 rounded-2xl text-sm">TypeScript</span>
+            <span class="glass border border-white/10 px-4 py-2 rounded-2xl text-sm">Tailwind</span>
+          </div>
+          <div class="flex gap-3">
+            <a href="#projects" class="bg-white text-slate-900 px-5 py-3 rounded-2xl font-semibold shadow-ios-card hover:-translate-y-0.5 transition">View Projects</a>
+            <a href="#contact" class="glass px-5 py-3 rounded-2xl font-semibold border border-white/10 hover:border-white/30 transition">Book a call</a>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="absolute inset-0 blur-2xl bg-gradient-to-br from-blue-400/30 to-cyan-400/30 rounded-[32px]"></div>
+          <div class="relative glass rounded-[32px] p-6 border border-white/10 shadow-ios-card space-y-4">
+            <div class="flex items-center gap-4">
+              <div class="h-20 w-20 rounded-3xl overflow-hidden shadow-inner shadow-white/10">
+                <img src="profile%20picture.jpg" alt="Lorenz Luyahan portrait" class="h-full w-full object-cover">
+              </div>
+              <div class="space-y-1">
+                <p class="text-xs text-slate-300 uppercase tracking-[0.2em]">Based in</p>
+                <p class="text-lg font-semibold text-white">Philippines · Remote-ready</p>
+                <span class="inline-block px-3 py-1 rounded-full text-xs bg-white/15 text-white border border-white/20">Open for work</span>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-3 pt-2">
+              <a href="mailto:obaleslorenz@gmail.com" class="glass border border-white/10 rounded-2xl p-3 text-sm flex items-center gap-2 hover:border-white/30 transition">
+                <span class="h-2 w-2 rounded-full bg-emerald-400"></span>Email
+              </a>
+              <a href="https://github.com/Leanyuuu" target="_blank" rel="noreferrer" class="glass border border-white/10 rounded-2xl p-3 text-sm flex items-center gap-2 hover:border-white/30 transition">
+                <span class="h-2 w-2 rounded-full bg-indigo-400"></span>GitHub
+              </a>
+              <a href="https://www.facebook.com/lorenz.obales.luyahan" target="_blank" rel="noreferrer" class="glass border border-white/10 rounded-2xl p-3 text-sm flex items-center gap-2 hover:border-white/30 transition">
+                <span class="h-2 w-2 rounded-full bg-blue-400"></span>Facebook
+              </a>
+              <a href="resume.pdf" download class="glass border border-white/10 rounded-2xl p-3 text-sm flex items-center gap-2 hover:border-white/30 transition">
+                <span class="h-2 w-2 rounded-full bg-amber-300"></span>Résumé
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="space-y-6">
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-xs uppercase tracking-[0.35em] text-slate-300">Skills</p>
+          <h3 class="text-2xl font-semibold text-white">What Lorenz works with</h3>
+        </div>
+        <span class="text-sm text-slate-300">Laravel • Django • TS • Tailwind</span>
+      </div>
+      <div id="skillGrid" class="grid gap-5 md:grid-cols-2 lg:grid-cols-3"></div>
+    </section>
+
+    <section id="soft-skills" class="glass rounded-3xl p-8 md:p-10 shadow-ios-card border border-white/10 space-y-6">
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-xs uppercase tracking-[0.35em] text-slate-300">Soft Skills</p>
+          <h3 class="text-2xl font-semibold text-white">How Lorenz works</h3>
+        </div>
+        <span class="text-sm text-slate-300">Collaboration • Clarity • Adaptability</span>
+      </div>
+      <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <div class="glass border border-white/10 rounded-2xl p-4 space-y-2 shadow-ios-card">
+          <p class="text-sm uppercase tracking-[0.2em] text-slate-300">Communication</p>
+          <p class="text-white font-semibold">Clear, concise updates</p>
+          <p class="text-slate-200 text-sm">Keeps stakeholders aligned with short, actionable progress notes.</p>
+        </div>
+        <div class="glass border border-white/10 rounded-2xl p-4 space-y-2 shadow-ios-card">
+          <p class="text-sm uppercase tracking-[0.2em] text-slate-300">Teamwork</p>
+          <p class="text-white font-semibold">Collaboration first</p>
+          <p class="text-slate-200 text-sm">Pairs well with designers and backend teams to unblock delivery.</p>
+        </div>
+        <div class="glass border border-white/10 rounded-2xl p-4 space-y-2 shadow-ios-card">
+          <p class="text-sm uppercase tracking-[0.2em] text-slate-300">Critical Thinking</p>
+          <p class="text-white font-semibold">Systems mindset</p>
+          <p class="text-slate-200 text-sm">Breaks problems into risks, constraints, and measurable outcomes.</p>
+        </div>
+        <div class="glass border border-white/10 rounded-2xl p-4 space-y-2 shadow-ios-card">
+          <p class="text-sm uppercase tracking-[0.2em] text-slate-300">Adaptability</p>
+          <p class="text-white font-semibold">Ready for change</p>
+          <p class="text-slate-200 text-sm">Shifts with new requirements, keeping UX quality and timelines intact.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="application-letter" class="glass rounded-3xl p-8 md:p-10 shadow-ios-card border border-white/10 space-y-4">
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-xs uppercase tracking-[0.35em] text-slate-300">Application Letter</p>
+          <h3 class="text-2xl font-semibold text-white">Cover note download</h3>
+        </div>
+        <a href="Two%20types%20of%20applications%20letter.docx" download class="bg-white text-slate-900 px-4 py-2 rounded-2xl text-sm font-semibold shadow-ios-card hover:-translate-y-0.5 transition">Download DOCX</a>
+      </div>
+      <p class="text-slate-200">Grab the latest application letter tailored for roles in UI/UX, system analysis, and full-stack work.</p>
+      <a href="Two%20types%20of%20applications%20letter.docx" download class="glass border border-white/10 rounded-2xl px-4 py-3 inline-flex items-center gap-2 text-sm font-semibold text-white hover:border-white/30 transition">
+        <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+        Download application letter (DOCX)
+      </a>
+    </section>
+
+    <section id="projects" class="glass rounded-3xl p-8 md:p-10 shadow-ios-card border border-white/10 space-y-6">
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-xs uppercase tracking-[0.35em] text-slate-300">Selected Work</p>
+          <h3 class="text-2xl font-semibold text-white">Shipping with care</h3>
+        </div>
+        <span class="text-sm text-slate-300">Recent highlights</span>
+      </div>
+      <div class="grid gap-6 md:grid-cols-[1.1fr_0.9fr] items-stretch">
+        <a href="project%201.jpg" target="_blank" rel="noreferrer"
+           class="glass rounded-3xl border border-white/10 shadow-ios-card overflow-hidden hover:-translate-y-1 transition flex flex-col md:flex-row">
+          <div class="md:w-1/2 relative h-48 md:h-auto">
+            <img src="project%201.jpg" alt="Project One · Django + Tailwind" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/30 to-transparent"></div>
+          </div>
+          <div class="p-6 space-y-3 flex-1 flex flex-col justify-center">
+            <div class="flex items-center gap-3">
+              <span class="px-3 py-1 rounded-full text-xs bg-white/15 text-white border border-white/20">Tailwind + Django</span>
+              <span class="text-xs text-slate-300">Featured</span>
+            </div>
+            <h4 class="text-xl font-semibold text-white">Project One · Django + Tailwind</h4>
+            <p class="text-slate-200">Full-stack build with Django/DRF backend and Tailwind UI, API-driven pages, and responsive layouts.</p>
+            <div class="flex flex-wrap gap-2 text-sm text-white/80">
+              <span class="px-3 py-1 rounded-full bg-white/10 border border-white/15">Django</span>
+              <span class="px-3 py-1 rounded-full bg-white/10 border border-white/15">Tailwind</span>
+              <span class="px-3 py-1 rounded-full bg-white/10 border border-white/15">TypeScript</span>
+            </div>
+            <div class="flex items-center gap-2 text-sm text-white">
+              <span>View full preview</span>
+              <span class="h-6 w-6 rounded-full bg-white/20 grid place-items-center text-xs">→</span>
+            </div>
+          </div>
+        </a>
+        <div class="space-y-4 text-slate-200 glass rounded-3xl border border-white/10 shadow-ios-card p-6">
+          <p class="text-sm uppercase tracking-[0.2em] text-slate-300">Summary</p>
+          <p>Project One pairs a Django/DRF backend with Tailwind-driven UI components to ship a modern, responsive web experience with clean API integrations.</p>
+          <ul class="space-y-2 text-sm">
+            <li class="flex gap-2"><span class="h-2 w-2 rounded-full bg-emerald-400 mt-1"></span>API-first pages and dashboards</li>
+            <li class="flex gap-2"><span class="h-2 w-2 rounded-full bg-sky-400 mt-1"></span>Tailwind design system with reusable blocks</li>
+            <li class="flex gap-2"><span class="h-2 w-2 rounded-full bg-indigo-400 mt-1"></span>Responsive layouts and motion polish</li>
+          </ul>
+        </div>
+      </div>
+      <div id="projectList" class="grid gap-6 md:grid-cols-2"></div>
+    </section>
+
+    <section id="certificates" class="glass rounded-3xl p-8 md:p-10 shadow-ios-card border border-white/10 space-y-6">
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-xs uppercase tracking-[0.35em] text-slate-300">Certificates</p>
+          <h3 class="text-2xl font-semibold text-white">Proof of craft</h3>
+        </div>
+        <span class="text-sm text-slate-300">Laravel · Django · Web</span>
+      </div>
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <a href="certificate/lorenz1.jpg" target="_blank" rel="noreferrer" class="block overflow-hidden rounded-2xl border border-white/10 glass shadow-ios-card hover:-translate-y-1 transition">
+          <img src="certificate/lorenz1.jpg" alt="Certificate 1" class="w-full h-52 object-cover" loading="lazy">
+        </a>
+        <a href="certificate/lorenz2.jpg" target="_blank" rel="noreferrer" class="block overflow-hidden rounded-2xl border border-white/10 glass shadow-ios-card hover:-translate-y-1 transition">
+          <img src="certificate/lorenz2.jpg" alt="Certificate 2" class="w-full h-52 object-cover" loading="lazy">
+        </a>
+        <a href="certificate/lorenz3.jpg" target="_blank" rel="noreferrer" class="block overflow-hidden rounded-2xl border border-white/10 glass shadow-ios-card hover:-translate-y-1 transition">
+          <img src="certificate/lorenz3.jpg" alt="Certificate 3" class="w-full h-52 object-cover" loading="lazy">
+        </a>
+        <a href="certificate/lorenz4.jpg" target="_blank" rel="noreferrer" class="block overflow-hidden rounded-2xl border border-white/10 glass shadow-ios-card hover:-translate-y-1 transition">
+          <img src="certificate/lorenz4.jpg" alt="Certificate 4" class="w-full h-52 object-cover" loading="lazy">
+        </a>
+        <a href="certificate/lorenz5.png" target="_blank" rel="noreferrer" class="block overflow-hidden rounded-2xl border border-white/10 glass shadow-ios-card sm:col-span-2 lg:col-span-1 hover:-translate-y-1 transition">
+          <img src="certificate/lorenz5.png" alt="Certificate 5" class="w-full h-52 object-cover" loading="lazy">
+        </a>
+      </div>
+    </section>
+
+    <section class="grid md:grid-cols-[1.1fr_0.9fr] gap-6">
+      <div class="glass rounded-3xl p-8 shadow-ios-card border border-white/10 space-y-6">
+        <p class="text-xs uppercase tracking-[0.35em] text-slate-300">Philosophy</p>
+        <h3 class="text-2xl font-semibold text-white">Calm, intentional, fast.</h3>
+        <p class="text-slate-200">Every project blends robust backend architecture with a refined iOS-like polish. Lorenz prioritizes fast load, smooth transitions, and components that feel native.</p>
+        <ul class="space-y-3 text-slate-200">
+          <li class="flex items-center gap-3"><span class="h-2 w-2 rounded-full bg-white/80"></span>Secure auth, APIs, and admin flows</li>
+          <li class="flex items-center gap-3"><span class="h-2 w-2 rounded-full bg-white/80"></span>Design systems with Tailwind tokens</li>
+          <li class="flex items-center gap-3"><span class="h-2 w-2 rounded-full bg-white/80"></span>Micro-interactions via Motion</li>
+        </ul>
+      </div>
+      <div id="contact" class="glass rounded-3xl p-8 shadow-ios-card border border-white/10 space-y-4">
+        <p class="text-xs uppercase tracking-[0.35em] text-slate-300">Contact</p>
+        <h3 class="text-2xl font-semibold text-white">Build something together</h3>
+        <div class="grid gap-4 md:grid-cols-[1.1fr_0.9fr]">
+          <form class="space-y-4">
+            <div>
+              <label class="text-sm text-slate-300">Name</label>
+              <input class="w-full mt-1 glass border border-white/10 px-4 py-3 rounded-2xl text-white placeholder:text-slate-500 focus:outline-none focus:border-white/40" placeholder="Your name">
+            </div>
+            <div>
+              <label class="text-sm text-slate-300">Email</label>
+              <input type="email" class="w-full mt-1 glass border border-white/10 px-4 py-3 rounded-2xl text-white placeholder:text-slate-500 focus:outline-none focus:border-white/40" placeholder="you@example.com">
+            </div>
+            <div>
+              <label class="text-sm text-slate-300">Project</label>
+              <textarea class="w-full mt-1 glass border border-white/10 px-4 py-3 rounded-2xl text-white placeholder:text-slate-500 focus:outline-none focus:border-white/40" rows="3" placeholder="What do you need?"></textarea>
+            </div>
+            <button type="button" class="w-full bg-white text-slate-900 px-5 py-3 rounded-2xl font-semibold shadow-ios-card hover:-translate-y-0.5 transition">Send inquiry</button>
+          </form>
+          <div class="glass border border-white/10 rounded-3xl p-4 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-slate-300">Email</span>
+              <a class="text-white font-semibold hover:underline" href="mailto:obaleslorenz@gmail.com">obaleslorenz@gmail.com</a>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-slate-300">Phone</span>
+              <a class="text-white font-semibold hover:underline" href="tel:09270282225">09270282225</a>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-slate-300">Facebook</span>
+              <a class="text-white font-semibold hover:underline" href="https://www.facebook.com/lorenz.obales.luyahan" target="_blank" rel="noreferrer">/lorenz.obales.luyahan</a>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-slate-300">GitHub</span>
+              <a class="text-white font-semibold hover:underline" href="https://github.com/Leanyuuu" target="_blank" rel="noreferrer">@Leanyuuu</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="flex items-center justify-between py-4 text-sm text-slate-400">
+      <span>© 2026 Lorenz Luyahan</span>
+      <span>Built with Laravel · Django · TS · Tailwind</span>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/motion@11.11.15/dist/motion.umd.min.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
+
+                                                                                                                                        
